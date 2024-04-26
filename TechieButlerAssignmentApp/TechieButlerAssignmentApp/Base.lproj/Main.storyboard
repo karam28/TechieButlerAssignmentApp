@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Ix-K2-OyW">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Posts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TechieButlerAssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DjE-wh-Bd6">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="AuY-gS-o4H"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2el-eB-FwX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DjE-wh-Bd6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hr4-pa-Kgv"/>
+                            <constraint firstItem="DjE-wh-Bd6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lnw-7q-3hc"/>
+                            <constraint firstItem="DjE-wh-Bd6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dTg-PU-bZT"/>
+                            <constraint firstItem="DjE-wh-Bd6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zwO-G0-DTI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Posts" id="fgq-wE-lR7"/>
+                    <connections>
+                        <outlet property="postTblView" destination="DjE-wh-Bd6" id="TRO-yl-mXo"/>
+                        <segue destination="Ux6-Ef-xnX" kind="show" identifier="showPostDetail" id="AlY-Tz-3pX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
+        </scene>
+        <!--Post Detail View Controller-->
+        <scene sceneID="d2s-QQ-5qB">
+            <objects>
+                <viewController storyboardIdentifier="PostDetailViewController" id="Ux6-Ef-xnX" customClass="PostDetailViewController" customModule="TechieButlerAssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X2J-OJ-bJd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lrp-z7-pod">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ux6-Ef-xnX" id="JBB-DU-QfS"/>
+                                    <outlet property="delegate" destination="Ux6-Ef-xnX" id="6YF-gq-z5u"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zCf-Zn-Cg0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lrp-z7-pod" firstAttribute="top" secondItem="zCf-Zn-Cg0" secondAttribute="top" id="EOF-Y9-SQH"/>
+                            <constraint firstItem="lrp-z7-pod" firstAttribute="bottom" secondItem="zCf-Zn-Cg0" secondAttribute="bottom" id="JRR-7c-xjD"/>
+                            <constraint firstItem="lrp-z7-pod" firstAttribute="trailing" secondItem="zCf-Zn-Cg0" secondAttribute="trailing" id="TFA-sn-eN1"/>
+                            <constraint firstItem="lrp-z7-pod" firstAttribute="leading" secondItem="zCf-Zn-Cg0" secondAttribute="leading" id="gCe-ab-c1y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mkh-QR-Sah"/>
+                    <connections>
+                        <outlet property="postDetailTblView" destination="lrp-z7-pod" id="LUF-WO-5qb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8x-ma-H7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="-35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uvF-Bc-cnD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Ix-K2-OyW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cNU-Lm-BIt">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kdP-PR-sXv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06y-ho-WGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
